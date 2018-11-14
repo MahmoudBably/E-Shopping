@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "98171008625",
+    "firebase_url": "https://eshopping-b7f3b.firebaseio.com",
+    "project_id": "eshopping-b7f3b",
+    "storage_bucket": "eshopping-b7f3b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:98171008625:android:039cfc23eb573723",
+        "android_client_info": {
+          "package_name": "com.projectehoppping.ionic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "98171008625-ii95th2umbcgcg80ob94jri1plutujdo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5sIXLIfQsRCRDRncPirlu73FB3KdRX2Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

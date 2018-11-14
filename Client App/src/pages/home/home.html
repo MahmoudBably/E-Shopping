@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>Home</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+  
+   <ion-list>
+        <ion-item-sliding *ngFor="let product of productlist$">
+          <ion-item>
+             
+            <ion-avatar item-start>
+              
+                <img src="{{product.Image}} ">
+                
+            </ion-avatar>
+            <h2><h5 color="primary">Title:  {{product.Title}}</h5></h2>
+            <h2><h5 color="primary">Description: {{product.Description}}</h5></h2>
+            <h2><h5 color="primary">Price:  {{product.Price}}</h5></h2>
+            <h2><h5 color="primary">Quantity:  {{product.Quantity}}</h5></h2>
+            
+          </ion-item>
+          <ion-item-options side="left" >
+            <button ion-button color="secondary"  detail-push navPush="ProductMapPage" [navParams]="{product:product}">
+                <ion-icon ios="ios-pin" md="md-pin"></ion-icon>Location</button>
+            
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-list>
+    
+  </ion-content>
+  

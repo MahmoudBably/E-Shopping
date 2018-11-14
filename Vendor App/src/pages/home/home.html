@@ -1,0 +1,50 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>Home</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+  
+  
+   <ion-list>
+        <ion-item-sliding *ngFor="let product of productlist$">
+          <ion-item>
+             
+            <ion-avatar item-start>
+              
+                <img src="{{product.Image}} ">
+                
+            </ion-avatar>
+            <h2>{{product.Title}}</h2>
+          </ion-item>
+          <ion-item-options side="left" >
+            <button ion-button color="custom1"  detail-push navPush="ShowProductPage" [navParams]="{product: product}">
+              <ion-icon ios="ios-more" md="md-more"></ion-icon>
+              Details
+            </button>
+            
+            <button ion-button color="custom2"  detail-push navPush="ProductMapPage" [navParams]="{product:product}">
+                <ion-icon ios="ios-pin" md="md-pin"></ion-icon>Location
+              </button>
+            
+          </ion-item-options>
+          <ion-item-options side="right">
+
+            <button ion-button color="primary" (click)="EditProductPage(product)">
+                  <ion-icon ios="ios-create" md="md-create"></ion-icon>
+                  Edit
+            </button>
+
+            <button ion-button color="danger" (click)="deleteProduct(product)">
+             <ion-icon ios="ios-trash" md="md-trash"></ion-icon>
+              Delete
+            </button>
+
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-list>
+    
+  </ion-content>
+   
+ 

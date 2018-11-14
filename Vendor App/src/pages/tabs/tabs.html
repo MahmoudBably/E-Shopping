@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Products
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="Logout()">
+        Logout
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-tabs selectedIndex="0">
+    <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="ios-basket"></ion-tab>
+    <ion-tab [root]="tab2Root" tabTitle="Add Product" tabIcon="ios-add"></ion-tab>
+  </ion-tabs>
+  

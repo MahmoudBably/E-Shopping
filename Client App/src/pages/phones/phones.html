@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Categories</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+      <ion-list>
+          <ion-item>
+            <ion-label>Category</ion-label>
+            <ion-select [(ngModel)]="Category" (ionChange)="choose()">
+              <ion-option value="Phone">Phones&amp;Tablets</ion-option>
+              <ion-option value="Laptop">Laptops</ion-option>
+              <ion-option value="TV">TVs</ion-option>
+              <ion-option value="Accessory">Accessories</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      <ion-list>
+      <ion-item-sliding *ngFor="let product of productlist$">
+        <ion-item>
+           
+          <ion-avatar item-start>
+            
+              <img src="{{product.Image}} ">
+              
+          </ion-avatar>
+          <h2 style="font-size:30px;">Title:  {{product.Title}}</h2>
+          <h2><h5 color="primary">Price:  {{product.Price}}</h5></h2>
+          <h2><h5 color="primary">Available Quantity:  {{product.Quantity}}</h5></h2><br />
+          
+          
+        </ion-item>
+        <ion-item-options side="left" >
+          <button ion-button color="primary"  detail-push navPush="ProductMapPage" [navParams]="{product: product}">
+              <ion-icon ios="ios-pin" md="md-pin"></ion-icon>Location</button>
+          
+        </ion-item-options>
+        
+        <ion-item-options side="right" >
+            <button ion-button color="secondary"  detail-push navPush="ItemViewPage" [navParams]="{product: product}">
+                <ion-icon ios="ios-cart" md="md-cart"></ion-icon>Purchase</button>
+            
+          </ion-item-options>
+
+      </ion-item-sliding>
+    </ion-list>
+  
+</ion-content>

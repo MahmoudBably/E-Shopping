@@ -1,0 +1,60 @@
+<ion-header>
+    
+      <ion-navbar color="primary">
+        <ion-title>{{product?.Title}}</ion-title>
+      </ion-navbar>
+    
+    </ion-header>
+    
+    <ion-content padding>
+      
+        <ion-content padding>
+        <ion-item>
+          <ion-label floating>Title</ion-label>
+          <ion-input [(ngModel)]="product.Title">
+          </ion-input>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label floating>Description</ion-label>
+          <ion-input [(ngModel)]="product.Description">
+          </ion-input>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label floating>Price</ion-label>
+          <ion-input [(ngModel)]="product.Price" type="number">
+          </ion-input>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label floating>Quantity</ion-label>
+          <ion-input [(ngModel)]="product.Quantity" type="number">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <button ion-button (click)= "LocationMap()">Location</button>
+        </ion-item>
+        <ion-col col-6>
+          <button ion-button block outline icon-left (click)="editTakePhoto()">
+            <ion-icon name="camera"></ion-icon>
+            Camera
+          </button>
+      </ion-col>
+      <ion-col col-6>
+          <button ion-button block outline icon-left (click)="editOpenGallery()">
+            <ion-icon name="image"></ion-icon>
+            Gallery
+          </button>
+      </ion-col>
+  
+      <ion-item > 
+        <img src="{{currentImage}}"/>
+      </ion-item>
+      <br>
+        <button ion-button block clear (click)="saveProduct(product)">Save</button>
+        <button ion-button block clear (click)="cancel()">Cancel</button>
+        </ion-content>
+        
+    </ion-content>
+    

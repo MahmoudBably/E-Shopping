@@ -1,0 +1,31 @@
+<ion-header>
+    
+      <ion-navbar>
+        <ion-title>{{product?.Title}}</ion-title>
+      </ion-navbar>
+    
+    </ion-header>
+    
+    
+    <ion-content padding>
+    
+        <ion-item>
+            
+            
+          <img  width="100%" height="150" src="{{product.Image}} "><br /><br />
+              
+          <h3 style="font-size:30px;">Title:  {{product.Title}}</h3><br />
+          <h3>Description: {{product.Description}}</h3><br />
+          <h3>Price:  {{product.Price}}</h3><br />
+          <h3>Quantity:  {{product.Quantity}}</h3><br />
+         
+        </ion-item>
+        
+        <ion-col col-6> 
+            <button ion-button block color="danger" (click)="cancel()">
+              Cancel
+            </button> 
+        </ion-col>
+        
+    </ion-content>
+    

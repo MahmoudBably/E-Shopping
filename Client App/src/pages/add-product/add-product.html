@@ -1,0 +1,92 @@
+<ion-header>
+  
+    <ion-navbar color="primary">
+      <ion-title>Add Product</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+      <ion-list radio-group [(ngModel)]="product.Category">
+          
+            <ion-list-header>
+              Category
+            </ion-list-header>
+          
+            <ion-item>
+              <ion-label>Phones&amp;Tablets</ion-label>
+              <ion-radio value="Phone"></ion-radio>
+            </ion-item>
+          
+            <ion-item>
+              <ion-label>Laptops</ion-label>
+              <ion-radio value="Laptop"></ion-radio>
+            </ion-item>
+          
+            <ion-item>
+              <ion-label>TVs</ion-label>
+              <ion-radio value="TV"></ion-radio>
+            </ion-item>
+      
+            <ion-item>
+              <ion-label>Accessories</ion-label>
+              <ion-radio value="Accessory"></ion-radio>
+            </ion-item>
+          
+           
+          </ion-list>
+  <ion-item>
+    <ion-label floating>Title</ion-label>
+    <ion-input [(ngModel)]="product.Title">
+    </ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label floating>Description</ion-label>
+    <ion-input [(ngModel)]="product.Description">
+    </ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label floating>Price</ion-label>
+    <ion-input [(ngModel)]="product.Price" type="number">
+    </ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label floating>Quantity</ion-label>
+    <ion-input [(ngModel)]="product.Quantity" type="number">
+    </ion-input>
+  </ion-item>
+<button ion-button block outline icon-left  (click)= "LocationMap()">Set Location</button>
+
+    <ion-col col-6>
+      <button ion-button block outline icon-left (click)="takePhoto()">
+        <ion-icon name="camera"></ion-icon>
+        Camera
+      </button>
+  </ion-col>
+  <ion-col col-6>
+      <button ion-button block outline icon-left (click)="openGallery()">
+        <ion-icon name="image"></ion-icon>
+        Gallery
+      </button>
+  </ion-col>
+
+    <ion-item > 
+      <img src="{{currentImage}}"/>
+    </ion-item>
+  <ion-col col-6> 
+      <button ion-button block color="danger" (click)="cancel()">
+        Cancel
+      </button> 
+  </ion-col>
+  {{product.location}}
+   <br>
+    <button ion-button round full large  clear (click)="upLoad(product)">ADD
+    </button>
+      
+  
+  </ion-content>
+  

@@ -1,0 +1,49 @@
+<ion-header>
+  
+    <ion-navbar color="primary">
+      <ion-title>
+        {{product?.Title}}
+      </ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  <ion-content padding>
+    
+      <ion-content padding> 
+      <ion-item>
+        <ion-label floating>Title</ion-label>
+        <ion-input [(ngModel)]="product.Title">
+        </ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label floating>Description</ion-label>
+        <ion-input [(ngModel)]="product.Description">
+        </ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label floating>Price</ion-label>
+        <ion-input [(ngModel)]="product.Price" type="number" >
+        </ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label floating>Quantity</ion-label>
+        <ion-input [(ngModel)]="product.Quantity" type="number">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <button ion-button (click)= "LocationMap()"></button>
+        <ion-icon ios="ion-location" md="ion-location"></ion-icon>
+      </ion-item>
+      <ion-item >
+        <button ion-button full large  clear (click)="saveProduct(product)">
+        UpDِaTE</button>
+      </ion-item>     
+      
+      </ion-content>
+      
+  </ion-content>
+  
